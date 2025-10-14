@@ -26,31 +26,37 @@ body {
     font-size: 17px;
     
 }
+
 #home, #product{
     background-color: #fafafa;
     width: 100%;
     height: 954px;
 }
+
 #about, #contact{
     background-color: #111524;
     width: 100%;
     height: 954px;
 }
+
 .content{
     padding-top: 216PX;
 }
+
 h3, h1, p {
     margin: 0;
     margin-left: 101px;
     color: #111524;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 h3{
     width: 600px;
     font-weight: bold;
     font-size: 34px;
 
 }
+
 h1{
     width: 700px;
     margin-left: 91px;
@@ -58,11 +64,13 @@ h1{
     font-weight: bolder;
     font-style: italic;
 }
+
 #intro{
     width: 600px;
     font-weight: bold;
     font-size: 18px;
 }
+
 #discription{
     font-size: 18px;
     padding-top: 50px;
@@ -70,6 +78,7 @@ h1{
     width: 600px;
 
 }
+
 .icon {
   width: 28px;
   height: 28px;
@@ -77,16 +86,19 @@ h1{
   margin-left: 24px;
   cursor: pointer;
 }
+
 .icons{
     width: 600px;
     margin-top: 17px;
     margin-left: 81px;
 }
+
 .buttons{
     width: 600px;
     margin-top: 46px;
     margin-left: 101px;
 }
+
 button{
     margin-right: 64px;
     width: 168px;
@@ -96,14 +108,17 @@ button{
     border-radius: 25px;
     cursor: pointer;
 }
+
 #aboutB{
     background-color: #111524;
     color: #fafafa;
     border: none;
 }
+
 #contactB{
     background-color: #fafafa;
 }
+
 .header{
     text-align: center;
     font-size: 70px;
