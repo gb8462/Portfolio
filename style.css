@@ -1,34 +1,48 @@
 body {
     margin: 0;
+    padding: 0;
 }
 
 .navbar {
-    background-color: #111524;
-    color: rgb(247, 247, 247);
     position: sticky;
     top: 0;
+    background-color: #111524;
+    color: rgb(247, 247, 247);
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     height: 70px;
     padding: 0 40px;
     font-family: Arial, Helvetica, sans-serif;
     z-index: 1;
+    user-select: none;
 }
 
 #Logo {
     font-size: 24px;
     font-style: italic;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .nav-links {
     display: flex;
-    gap: 45px;
     font-size: 17px;
-    
+    height: 100%;
 }
-.nav{
+
+.nav-links div{
+    display: flex;
+    align-items: center;
+    padding: 0 20px; 
+    height: 100%;
+    cursor: pointer;
+}
+
+.nav-links div:hover {
+    transition: background-color 0.15s ease;
+    background-color: #fafafa;
+    color: #111524;
     cursor: pointer;
 }
 
@@ -47,7 +61,7 @@ body {
 }
 
 .content{
-    padding-top: 216PX;
+    padding-top: 216px;
 }
 
 #greeting, h1, p {
