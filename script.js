@@ -32,6 +32,10 @@ document.querySelectorAll('.nav').forEach(navItem => {
 const sections = document.querySelectorAll('div[id]');
 const navItems = document.querySelectorAll('.nav');
 
+// In case I change Navbar Height
+// const navHeight = document.querySelector('.navbar').offsetHeight;
+// const scrollYPos = window.scrollY + navHeight + 5;
+
 window.addEventListener('scroll', () => {
     if (isScrolling) return;
 
