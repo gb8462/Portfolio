@@ -35,19 +35,24 @@ body {
     height: 100%;
 }
 
-.nav-links div{
+.nav {
     display: flex;
     align-items: center;
-    padding: 0 20px; 
     height: 100%;
+    padding: 0 20px;
+    color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-links div:hover {
-    transition: background-color 0.15s ease;
+.nav:hover:not(.active) {
     background-color: #fafafa;
     color: #111524;
-    cursor: pointer;
+}
+
+.nav.active {
+    background-color: #fafafa;
+    color: #111524;
 }
 
 #home, #services, #contact {
