@@ -25,7 +25,6 @@ body {
 #Logo {
     font-size: 24px;
     font-style: italic;
-    cursor: pointer;
     margin-left: 20px;
 }
 
@@ -111,19 +110,19 @@ h1{
   width: 28px;
   height: 28px;
   object-fit: contain;
-  margin-left: 24px;
+  margin-right: 24px;
   cursor: pointer;
 }
 
 .icons{
     width: 600px;
     margin-top: 17px;
-    margin-left: 81px;
+    margin-left: 101px;
 }
 
 .buttons{
     width: 600px;
-    margin-top: 46px;
+    margin-top: 40px;
     margin-left: 101px;
 }
 
