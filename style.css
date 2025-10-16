@@ -75,7 +75,6 @@ body {
     width: 600px;
     font-weight: bold;
     font-size: 34px;
-
 }
 
 h1{
@@ -97,7 +96,6 @@ h1{
     padding-top: 50px;
     font-weight: lighter;
     width: 600px;
-
 }
 
 .icon {
@@ -146,12 +144,15 @@ button{
     margin-top: 0px;
     padding-top: 50px;
 }
+
 #AboutHeader{
     color: #fafafa;
 }
+
 #ServicesHeader{
     color: #111524;
 }
+
 #ProjectsHeader{
     color: #fafafa  ;
 }
