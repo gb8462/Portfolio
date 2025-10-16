@@ -1,16 +1,30 @@
+let isScrolling = false;
+
+// smooth scroll when clicking nav item
 document.querySelectorAll('.nav').forEach(navItem => {
     navItem.addEventListener('click', () => {
         const targetId = navItem.getAttribute('data-target');
         const target = document.getElementById(targetId);
+
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            isScrolling = true;
+
+            // instantly update active class when clicked
+            document.querySelectorAll('.nav').forEach(nav => nav.classList.remove('active'));
+            navItem.classList.add('active');
+
+            // scroll smoothly to section
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // wait until scroll settles before re-enabling auto-detection
+            const checkScroll = setInterval(() => {
+                const distance = target.getBoundingClientRect().top;
+                if (Math.abs(distance) < 2) {
+                    isScrolling = false;
+                    clearInterval(checkScroll);
+                }
+            }, 100);
         }
-
-        // remove active class from all navs
-        document.querySelectorAll('.nav').forEach(n => n.classList.remove('active'));
-
-        // add active class only to clicked one
-        navItem.classList.add('active');
     });
 });
 
@@ -19,21 +33,21 @@ const sections = document.querySelectorAll('div[id]');
 const navItems = document.querySelectorAll('.nav');
 
 window.addEventListener('scroll', () => {
+    if (isScrolling) return;
+
     let current = '';
+    const scrollYPos = window.scrollY + 75; // slightly less offset for smoother activation
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 80; // adjust for navbar height
+        const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        if (scrollYPos >= sectionTop && scrollYPos < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
 
     navItems.forEach(nav => {
-        nav.classList.remove('active');
-        if (nav.getAttribute('data-target') === current) {
-            nav.classList.add('active');
-        }
+        nav.classList.toggle('active', nav.getAttribute('data-target') === current);
     });
 });
