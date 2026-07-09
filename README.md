@@ -1,1 +1,1 @@
-## [My Own Website Portfolio](https://gb8462.github.io/Portfolio/)
+## [My Website Portfolio](https://gb8462.github.io/Portfolio/)
